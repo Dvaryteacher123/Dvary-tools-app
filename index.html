@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - DVARY</title>
+<style>
+/* Reset na setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+/* Background ya picha */
+.login-bg {
+    background-image: 
+        /* Weka rangi nyeusi yenye uwazi ili maandishi yasomeke vizuri juu ya picha */
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url('https://res.cloudinary.com/dvbftux6w/image/upload/v1782497850/xbbsnfjqbvlq39m7rd4i.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sanduku la login (Glassmorphism) */
+.login-card {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px); /* Athari ya kufanya picha nyuma ionekane inayeyuka */
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px 35px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+/* Maandishi */
+.login-card h1 {
+    color: #00ffcc; /* Rangi ya kijani kwa staili */
+    font-size: 36px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.login-card p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* Sehemu za kujaza */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #00ffcc;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.15);
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Kitufe */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background: #00ffcc;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 255, 204, 0.3);
+}
+
+/* Viungo chini */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00ffcc;
+}
+
+/* Kwa simu (Responsive) */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+    .login-card h1 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="login-bg">
+    <div class="login-card">
+        <h1>DVARY</h1>
+        <p>Ingia kutumia akaunti yako</p>
+
+        <form>
+            <div class="input-group">
+                <label>📧 Barua pepe</label>
+                <input type="email" placeholder="email@example.com">
+            </div>
+            
+            <div class="input-group">
+                <label>🔒 Nenosiri</label>
+                <input type="password" placeholder="Nenosiri lako">
+            </div>
+
+            <button type="button">🔑 INGIA</button>
+
+            <div class="footer-links">
+                <a href="#">Umesahia nenosiri?</a>
+                <a href="#">Jiandikisha</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
